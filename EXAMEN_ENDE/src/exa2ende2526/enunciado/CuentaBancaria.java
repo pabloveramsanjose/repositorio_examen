@@ -31,4 +31,9 @@ public abstract class CuentaBancaria {
         saldo -= cantidad;
     }
 
+    public void CalcularInteres() {
+    	saldo = this.saldo;
+    	int comision;
+    	
+    }
 }
