@@ -2,9 +2,9 @@ package exa2ende2526.enunciado;
 
 public class CuentaAhorro {
 	
-	public CuentaAhorro(double saldoInicial,String titular) {
+	public CuentaAhorro(double saldoInicial,String titular,int comision) {
 		super();
-		int comision;
+		
 		
 	}
 
