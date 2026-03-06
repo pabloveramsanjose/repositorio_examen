@@ -9,6 +9,7 @@ public abstract class CuentaBancaria {
         if (saldoInicial < 0) {
             throw new IllegalArgumentException("El saldo inicial no puede ser negativo");
         }
+        
         this.titular = titular;
         this.saldo = saldoInicial;
     }
@@ -24,11 +25,17 @@ public abstract class CuentaBancaria {
     public void ingresar(double cantidad) {
 
         saldo += cantidad;
+        if (saldo < 0) {
+            throw new IllegalArgumentException("La cantidad ingresada no puede ser negativa");
+        }
     }
 
     public void reintegrar(double cantidad) {
 
         saldo -= cantidad;
+        saldo += cantidad;
+        if (saldo < 0) {
+            throw new IllegalArgumentException("La cantidad reintegrada no puede ser negativa");
+        }
     }
-
 }
